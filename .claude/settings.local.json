@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "Bash(node \"C:/Users/hwoo4/AppData/Local/Temp/claude/c--dev-dumgeum/9dd100b6-ec70-49fb-bb41-9f5554a0c69a/scratchpad/rls-check.mjs\")",
+      "Bash(node \"c:/dev/dumgeum/__rls-check.mjs\")"
+    ]
+  }
+}
