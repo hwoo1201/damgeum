@@ -225,7 +225,7 @@ function ResultContent() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen pb-16 bg-navy text-white px-5">
+    <div className="flex flex-col min-h-screen bg-navy text-white px-5">
       {/* 게이지 섹션 */}
       <div className="flex flex-col items-center pt-10 pb-8 border-b border-white/5">
         <h2 className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-6">
@@ -384,10 +384,13 @@ function ResultContent() {
       )}
 
       {/* CTA 버튼 */}
-      <div className="mt-10 px-1">
+      <div
+        className="mt-10 pb-6"
+        style={{ paddingBottom: "calc(1.5rem + env(safe-area-inset-bottom))" }}
+      >
         <button
           onClick={handleCtaClick}
-          className="w-full py-4.5 bg-gradient-to-r from-gold via-gold-light to-gold-dark text-navy font-bold text-base rounded-xl shadow-[0_4px_20px_rgba(212,175,55,0.25)] hover:opacity-90 active:scale-[0.98] transition-all duration-200"
+          className="w-full py-4 bg-gradient-to-r from-gold via-gold-light to-gold-dark text-navy text-base font-bold rounded-xl shadow-[0_4px_20px_rgba(212,175,55,0.25)] hover:opacity-90 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none transition-all duration-200"
         >
           3일 무료로 시작하기
         </button>
@@ -459,7 +462,7 @@ function ResultContent() {
                   <button
                     type="submit"
                     disabled={!agreePrivacy || !email || isSubmittingOrder}
-                    className="w-full py-4 bg-gold text-navy font-semibold text-sm rounded-xl shadow-lg hover:opacity-90 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none transition-all"
+                    className="w-full py-4 bg-gradient-to-r from-gold via-gold-light to-gold-dark text-navy text-base font-bold rounded-xl shadow-[0_4px_20px_rgba(212,175,55,0.25)] hover:opacity-90 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none transition-all duration-200"
                   >
                     {isSubmittingOrder ? "등록 중..." : "사전등록하기"}
                   </button>

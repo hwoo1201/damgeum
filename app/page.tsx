@@ -406,7 +406,7 @@ function QuizContent() {
   // 10번 슬라이더 문항
   if (currentStep === 10) {
     return (
-      <div className="flex flex-col min-h-screen px-6 py-6 justify-between">
+      <div className="flex flex-col min-h-screen px-6 pt-6 justify-between">
         {/* 상단 네비게이션 헤더 */}
         <div className="flex items-center justify-between w-full mb-6">
           <button
@@ -463,11 +463,14 @@ function QuizContent() {
         </div>
 
         {/* 완료 CTA 버튼 */}
-        <div className="w-full max-w-[340px] mx-auto mt-6">
+        <div
+          className="w-full mt-6 pb-6"
+          style={{ paddingBottom: "calc(1.5rem + env(safe-area-inset-bottom))" }}
+        >
           <button
             onClick={handleSliderSubmit}
             disabled={isSubmitting}
-            className="w-full py-4.5 bg-gradient-to-r from-gold via-gold-light to-gold-dark text-navy font-semibold text-base rounded-xl shadow-[0_4px_20px_rgba(212,175,55,0.25)] hover:opacity-90 active:scale-[0.98] transition-all duration-200"
+            className="w-full py-4 bg-gradient-to-r from-gold via-gold-light to-gold-dark text-navy text-base font-bold rounded-xl shadow-[0_4px_20px_rgba(212,175,55,0.25)] hover:opacity-90 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none transition-all duration-200"
           >
             {isSubmitting ? "분석 중..." : "제출하고 결과 보기"}
           </button>
